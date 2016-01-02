@@ -1,7 +1,13 @@
-import './main.scss';
-
+import './scss/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.js';
+import { Router, Route, Link, browserHistory } from 'react-router'
+import Routes from './routes';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+var routes = (
+   <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>{Routes}</Router>
+);
+
+window.onload = () => {
+  ReactDOM.render(routes, document.getElementById('app'));
+};

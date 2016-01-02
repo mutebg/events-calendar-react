@@ -1,0 +1,36 @@
+.el-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: 0.5s all;
+  * {
+    display: inline-block;
+
+  }
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  &__name {
+    flex: 3;
+  }
+
+  &__date {
+    flex: 1;
+  }
+
+  &__location {
+    flex: 1;
+  }
+
+  &__vanue {
+    flex: 1;
+  }
+}

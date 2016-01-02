@@ -2,6 +2,8 @@ var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var merge = require('webpack-merge');
 var webpack = require('webpack');
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -49,8 +51,10 @@ const common = {
   plugins: [
     new HtmlwebpackPlugin({
       title: 'MyEventsApp',
-      template: 'node_modules/html-webpack-template/index.html',
-      appMountId: 'app'
+      template: 'app/assets/index.html',
+      appMountId: 'app',
+      hash: true,
+      mobile: true,
     })
   ]
 };
@@ -79,5 +83,9 @@ if(TARGET === 'start' || !TARGET) {
 }
 
 if(TARGET === 'build') {
-  module.exports = merge(common, {});
+  module.exports = merge(common, {
+    plugins: [
+      new UglifyJsPlugin({ minimize: true })
+    ]
+  });
 }

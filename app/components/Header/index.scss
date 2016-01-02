@@ -1,0 +1,30 @@
+$header-height: 60px;
+
+.header {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: $header-height;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+
+  &__logo {
+    display: inline-block;
+  }
+}
+
+.nav {
+  text-align: right;
+
+  &__link {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+}

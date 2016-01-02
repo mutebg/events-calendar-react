@@ -1,0 +1,67 @@
+
+.calendar {
+
+}
+
+.c-month {
+  margin-bottom: 10px;
+
+  &__name {
+    width: 100px;
+    padding-left: 10px;
+    border-left: 0;
+  }
+}
+
+$day-size: 34px;
+.c-month__name,
+.c-day {
+  display: inline-block;
+  border-bottom: 1px solid #fff;
+  height: $day-size;
+  line-height: $day-size;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.c-day {
+  width: $day-size;
+  text-align: center;
+  border-left: 1px solid #fff;
+  position: relative;
+
+  .tooltip {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    font-size: .9rem;
+    top: $day-size;
+    left: 0;
+    line-height: 1rem;
+    width: 200px;
+    z-index: 3;
+    left: -80px;
+    transition: .3s opacity;
+    strong {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      display: inline-block;
+    }
+  }
+
+  &--active {
+    background: #fff;
+    color: #000;
+  }
+
+  &--today {
+    background: red;
+  }
+}

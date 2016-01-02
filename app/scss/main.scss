@@ -1,0 +1,30 @@
+@import 'reset.scss';
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+$bgColor: #000;
+body {
+  background: $bgColor;
+}
+
+.page {
+  padding: 100px 50px 50px 50px;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
