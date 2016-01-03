@@ -6,7 +6,8 @@ class Actions {
       'eventFetch',
       'eventSuccess',
       'eventFailed',
-      'setPage'
+      'setPage',
+      'setArrows'
     );
   }
 }

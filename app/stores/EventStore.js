@@ -12,6 +12,7 @@ class EventStore {
       loading: false,
       error: false,
       page: 0,
+      show_arrows: true
     };
   }
 
@@ -54,6 +55,13 @@ class EventStore {
   setPage(page) {
     this.setState({
       page
+    });
+  }
+
+  @bind(Actions.setArrows)
+  setArrows(show_arrows) {
+    this.setState({
+      show_arrows
     });
   }
 

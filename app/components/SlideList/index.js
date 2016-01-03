@@ -10,6 +10,7 @@ class SlideList extends React.Component {
   constructor(props){
     super(props);
     EventActions.eventFetch();
+    EventActions.setArrows(true);
 
     this.transitionTime = 1;
     this.inTransition = false;
@@ -84,16 +85,15 @@ class SlideList extends React.Component {
       console.log('prev page');
       this.setPage( this.props.page  + 1);
     };
-    let nextSlide = this.hasPrevPage() ? <div className="slide-list__prev" onClick={movePrev.bind(this)}></div> : null;
-    let prevSlide = this.hasNextPage() ? <div className="slide-list__next" onClick={moveNext.bind(this)}></div> : null;
-
+    let nextSlide = this.hasPrevPage() && this.props.show_arrows ? "slide-list__prev slide-list__prev--show" : "slide-list__prev"
+    let prevSlide = this.hasNextPage() && this.props.show_arrows ? "slide-list__next slide-list__next--show" : "slide-list__prev";
     return (
       <div className="slide-list">
         <div className="slide-list__content" style={css.content}>
           {list}
         </div>
-        {nextSlide}
-        {prevSlide}
+        <div className={nextSlide} onClick={movePrev.bind(this)}></div>
+        <div className={prevSlide} onClick={moveNext.bind(this)}></div>
       </div>
     );
   }

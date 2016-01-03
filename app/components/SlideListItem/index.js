@@ -1,6 +1,8 @@
 import './index.scss';
 import React from 'react';
 import { Link, browserHistory } from 'react-router';
+import EventActions from '../../actions/EventActions';
+
 
 export default class SlideListItem extends React.Component {
   constructor(props) {
@@ -42,6 +44,8 @@ export default class SlideListItem extends React.Component {
     this.setState({
       is_header: true
     });
+
+    EventActions.setArrows(false);
 
     setTimeout( () => {
       browserHistory.push('event-' + this.props.id);

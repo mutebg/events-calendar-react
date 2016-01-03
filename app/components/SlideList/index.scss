@@ -19,6 +19,7 @@
     width: 80px;
     background: rgba(0,0,0, 0.3);
     cursor: pointer;
+    transition: .5s all;
 
     &:hover {
       &:after {
@@ -37,11 +38,16 @@
       transform: rotate(45deg);
       transition: .3s all;
     }
+
+    &--show {
+      transform: translateX(0) !important;
+    }
   }
 
   &__prev {
     left: 0;
     background: linear-gradient(to right, rgba(0,0,0, 0.6) 0%,rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
 
     &:after {
       left: 25px;
@@ -53,6 +59,7 @@
   &__next {
     right: 0;
     background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0, 0.6) 100%);
+    transform: translateX(100%);
 
     &:after {
       right: 25px;

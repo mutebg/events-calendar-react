@@ -27,7 +27,7 @@ $switch-transition: .5s;
   &__name {
     font-size: 12rem;
     text-shadow: 0px 0px 20px #000;
-    transition: all $switch-transition * 3;
+    transition: all $switch-transition linear;
     display: inline-block;
     white-space: nowrap;
   }
@@ -35,13 +35,13 @@ $switch-transition: .5s;
   &__date {
     font-size: 2.5rem;
     text-shadow: 0px 0px 10px #000;
-    transition: all $switch-transition * 3;
+    transition: all $switch-transition linear;
   }
 
   &__location {
     font-size: 1.8rem;
     text-shadow: 0px 0px 10px #000;
-    transition: all $switch-transition * 3;
+    transition: all $switch-transition linear;
   }
 
   &__btn {
@@ -54,7 +54,7 @@ $switch-transition: .5s;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 3px 12px #000;
-    transition: $switch-transition all;
+    transition: $switch-transition all linear;
     border: 0;
     cursor: pointer;
     &:hover {
@@ -80,7 +80,7 @@ $switch-transition: .5s;
     width: 80px;
     text-align: center;
     padding-bottom: 50px;
-    transition: all $switch-transition;
+    transition: all $switch-transition linear;
     transform: translateY(100%);
 
     &:after {
@@ -102,7 +102,7 @@ $switch-transition: .5s;
     color: #fff;
     display: inline-block;
     text-decoration: none;
-    transition: all $switch-transition;
+    transition: all $switch-transition linear;
     transform: translateX(-100%);
     z-index: 100;
 
@@ -134,7 +134,7 @@ $switch-transition: .5s;
     }
 
     .slide__location {
-      transform: translateX(30px);
+      transform: translateY(30px);
       opacity: 0;
     }
 
