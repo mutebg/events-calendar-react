@@ -6,7 +6,6 @@ import EventActions from '../../actions/EventActions';
 import SlideListItem from '../SlideListItem';
 import EventDetails from '../EventDetails';
 
-
 @connectToStores
 class PageDetails extends React.Component {
   constructor(props){

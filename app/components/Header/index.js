@@ -1,6 +1,7 @@
 import './index.scss';
 import React from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router';
+import Modal from '../Modal';
 
 
 export default class Header extends React.Component {

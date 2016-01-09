@@ -1,5 +1,15 @@
 @import 'reset.scss';
 
+$transition-time: 0.3s;
+
+$color-primary: blue;
+$color-success: green;
+$color-error: red;
+$color-bg: #000;
+
+$input-bordrer-color: #BDBDBD;
+
+
 html {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -15,9 +25,8 @@ strong {
   font-weight: bold;
 }
 
-$bgColor: #000;
 body {
-  background: $bgColor;
+  background: $color-bg;
 }
 
 .page {
@@ -28,3 +37,6 @@ body {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+
+
+@import 'form.scss';

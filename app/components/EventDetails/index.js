@@ -1,6 +1,15 @@
 import './index.scss';
 import React from 'react';
 import { Link } from 'react-router';
+import Graph from '../Graph';
+import _ from 'lodash';
+
+
+let fakeTrendData = [0];
+
+for( let i = 0; i < 40; i++ ) {
+  fakeTrendData.push( _.random(1, 25) );
+}
 
 export default class EventDetails extends React.Component {
   constructor(props) {
@@ -24,6 +33,13 @@ export default class EventDetails extends React.Component {
           <img src={locationImageURI} />
 
         </div>
+        <div className="details__box">
+          <h2 className="details__title">Tickets Trend</h2>
+          <div>
+            <Graph data={fakeTrendData}/>
+          </div>
+        </div>
+
         <div className="details__box">
           <h2 className="details__title">Additional information</h2>
           <p>This progressive, alternative spacerockband adds another future classic to their repertoire with their sixth album 'The 2ND Law'. With a perfect mix of hard rock, glam and classical influences - sometimes accompanied by dubstep and electronics - they know how to surprise</p>
